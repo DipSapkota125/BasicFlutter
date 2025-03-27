@@ -22,40 +22,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
         ),
       ),
-      title: const Text(
-        "My Custom App",
-        style: TextStyle(
-          fontSize: 22,
-          fontWeight: FontWeight.w600,
-          color: Colors.white,
-        ),
-      ),
-      centerTitle: true,
-      leading: IconButton(
-        icon: const Icon(Icons.menu, color: Colors.white),
-        onPressed: () {
-          // Handle menu button
-        },
-      ),
-      actions: [
-        IconButton(
-          icon: const Icon(Icons.notifications, color: Colors.white),
-          onPressed: () {
-            // Handle notifications
-          },
-        ),
-        IconButton(
-          icon: const CircleAvatar(
-            backgroundImage: AssetImage(
-              "assets/images/profile.jpg",
-            ), // Update with actual profile image
-          ),
-          onPressed: () {
-            // Handle profile tap
-          },
-        ),
-        const SizedBox(width: 8),
-      ],
     );
   }
 

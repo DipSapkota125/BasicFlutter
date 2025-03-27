@@ -1,3 +1,4 @@
+import 'package:calculater_app/screen/login/login.dart';
 import 'package:flutter/material.dart';
 
 class RegisterScreen extends StatelessWidget {
@@ -32,10 +33,21 @@ class RegisterScreen extends StatelessWidget {
                     border: OutlineInputBorder(),
                   ),
                 ),
+                SizedBox(height: size.height * 0.02),
+
                 TextField(
                   decoration: InputDecoration(
                     labelText: 'Email',
                     hintText: 'PLease enter your email',
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+                SizedBox(height: size.height * 0.02),
+
+                TextField(
+                  decoration: InputDecoration(
+                    labelText: 'mobile',
+                    hintText: 'PLease enter mobile number',
                     border: OutlineInputBorder(),
                   ),
                 ),
@@ -49,6 +61,15 @@ class RegisterScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: size.height * 0.02),
+
+                TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    labelText: 'confirmPassword',
+                    hintText: "Please Enter confirm Password",
+                    border: OutlineInputBorder(),
+                  ),
+                ),
 
                 SizedBox(height: size.height * 0.03),
                 SizedBox(
@@ -69,7 +90,17 @@ class RegisterScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Already't have an account? "),
-                    TextButton(onPressed: () {}, child: Text('Login')),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => LoginScreen(),
+                          ),
+                        );
+                      },
+                      child: Text('Login'),
+                    ),
                   ],
                 ),
               ],
