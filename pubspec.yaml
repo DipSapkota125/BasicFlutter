@@ -64,6 +64,7 @@ flutter:
   assets:
     - assets/
     - assets/images/HomeImage.png
+    - .env
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

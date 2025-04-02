@@ -1,7 +1,14 @@
 import 'package:calculater_app/screen/utility/splashView/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+void main() async {
+  // Make main async
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Initialize dotenv before the app runs
+  await dotenv.load(fileName: ".env");
+
   runApp(const MyApp());
 }
 
